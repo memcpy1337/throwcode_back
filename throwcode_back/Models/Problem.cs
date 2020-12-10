@@ -3,6 +3,7 @@ using System.Linq;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
+using System.Collections.Generic;
 
 namespace throwcode_back.Models
 {
@@ -17,7 +18,7 @@ namespace throwcode_back.Models
         public int Trying { get; set; }
         [Required]
         public ProblemDescription ProblemDescription { get; set; }
-        public  User[] Solved_By { get; set; }
+        public  List<User> Solved_By { get; set; }
     }
 
     public class ProblemDescription

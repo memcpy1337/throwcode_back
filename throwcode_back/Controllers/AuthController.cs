@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
+using SocialNetwork_Backend.Filters;
 using System;
 using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
@@ -7,7 +8,10 @@ using System.Linq;
 using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.Http;
 using throwcode_back.DB_Context;
+using HttpGetAttribute = Microsoft.AspNetCore.Mvc.HttpGetAttribute;
+using RouteAttribute = Microsoft.AspNetCore.Mvc.RouteAttribute;
 
 namespace throwcode_back.Controllers
 {
@@ -36,6 +40,28 @@ namespace throwcode_back.Controllers
                 return BadRequest();
             }
         }
+        [HttpGet(Name = "GetAuthStatus")]
+        [JwtAuthentication]
+        public IActionResult GetAuthStatus()
+        {
+            var user = User.Identities.FirstOrDefault();
+            if (user.IsAuthenticated)
+            {
+                return Ok(new
+                {
+                    isAuth = true,
+                    userId = user.Claims
+                            .Where(c => c.Type == ClaimTypes.SerialNumber)
+                            .Select(c => c.Value)
+                            .SingleOrDefault(),
+                    userLogin = user.Claims
+                            .Where(t => t.Type == ClaimTypes.Name)
+                            .Select(s => s.Value)
+                            .SingleOrDefault()
+                });
+            }
+            return Unauthorized();
+        }
 
         private string GenerateToken(int id, string username)
         {
@@ -56,6 +82,7 @@ namespace throwcode_back.Controllers
         {
             try
             {
+                
                 var tokenHandler = new JwtSecurityTokenHandler();
                 var jwtToken = tokenHandler.ReadToken(token) as JwtSecurityToken;
 

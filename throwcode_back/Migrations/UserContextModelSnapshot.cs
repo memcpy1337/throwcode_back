@@ -170,7 +170,7 @@ namespace throwcode_back.Migrations
                                     ExamplesJson = "[{\"input\":\"a = 1, b = 2\",\"output\":\"3\"},{\"input\":\"a = 3, b = 3\",\"output\":\"6\"}]",
                                     Id = 1,
                                     InitialCodeJson = "{\"Javascript\":\"JS Code Here!\",\"Csharp\":\"C# Code Here!\",\"CPlus\":\"C++ Code Here!\"}",
-                                    TestCasesJson = "[{\"input\":{\"a\":1,\"b\":2},\"output\":{\"output\":3}},{\"input\":{\"a\":4,\"b\":4},\"output\":{\"output\":8}}]"
+                                    TestCasesJson = "[{\"input\":[\"2\",\"1\"],\"output\":\"3\"},{\"input\":[\"2\",\"2\"],\"output\":\"4\"}]"
                                 },
                                 new
                                 {
@@ -180,7 +180,7 @@ namespace throwcode_back.Migrations
                                     ExamplesJson = "[{\"input\":\"a = 2, b = 1\",\"output\":\"1\"},{\"input\":\"a = 3, b = 3\",\"output\":\"0\"}]",
                                     Id = 2,
                                     InitialCodeJson = "{\"Javascript\":\"JS Code Here!\",\"Csharp\":\"C# Code Here!\",\"CPlus\":\"C++ Code Here!\"}",
-                                    TestCasesJson = "[{\"input\":{\"a\":2,\"b\":1},\"output\":{\"output\":1}},{\"input\":{\"a\":4,\"b\":4},\"output\":{\"output\":0}}]"
+                                    TestCasesJson = "[{\"input\":[\"2\",\"1\"],\"output\":\"1\"},{\"input\":[\"2\",\"2\"],\"output\":\"0\"}]"
                                 });
                         });
 

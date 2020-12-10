@@ -62,8 +62,9 @@ C:\Users\artem\source\repos\throwcode_back\throwcode_back\obj\Debug\netcoreapp3.
 C:\Users\artem\source\repos\throwcode_back\throwcode_back\obj\Debug\netcoreapp3.1\throwcode_back.pdb
 C:\Users\artem\source\repos\throwcode_back\throwcode_back\obj\Debug\netcoreapp3.1\throwcode_back.genruntimeconfig.cache
 C:\Users\artem\source\repos\throwcode_back\throwcode_back\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
-C:\Users\artem\source\repos\throwcode_back\throwcode_back\obj\Debug\netcoreapp3.1\throwcode_back.csproj.CoreCompileInputs.cache
-C:\Users\artem\source\repos\throwcode_back\throwcode_back\obj\Debug\netcoreapp3.1\throwcode_back.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\artem\source\repos\throwcode_back\throwcode_back\bin\Debug\netcoreapp3.1\System.Net.Http.Formatting.dll
 C:\Users\artem\source\repos\throwcode_back\throwcode_back\bin\Debug\netcoreapp3.1\System.Web.Http.dll
 C:\Users\artem\source\repos\throwcode_back\throwcode_back\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
+C:\Users\artem\source\repos\throwcode_back\throwcode_back\bin\Debug\netcoreapp3.1\ByteSize.dll
+C:\Users\artem\source\repos\throwcode_back\throwcode_back\obj\Debug\netcoreapp3.1\throwcode_back.csproj.CoreCompileInputs.cache
+C:\Users\artem\source\repos\throwcode_back\throwcode_back\obj\Debug\netcoreapp3.1\throwcode_back.MvcApplicationPartsAssemblyInfo.cache

@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using throwcode_back.Models;
 using Newtonsoft.Json;
+using throwcode_back.Controllers.ProblemCompilers;
 
 namespace throwcode_back.DB_Context
 {
@@ -77,11 +78,11 @@ namespace throwcode_back.DB_Context
                 Cheat = "К этой задаче нет подсказок",
                 Id = 2,
                 InitialCodeJson = JsonConvert.SerializeObject(new { Javascript = "JS Code Here!", Csharp = "C# Code Here!", CPlus = "C++ Code Here!" }),
-                TestCasesJson = JsonConvert.SerializeObject(new[]
+                TestCasesJson = JsonConvert.SerializeObject(new TestData[]
                 {
-                    new { input = new { a = 2, b = 1 }, output = new { output = 1 } },
-                    new { input = new { a = 4, b = 4 }, output = new { output = 0 } },
-                }),
+                    new TestData { input = new string[] {"2", "1"}, output = "1" },
+                    new TestData { input = new string[] {"2", "2"}, output = "0" },
+                })
 
             };
             ProblemDescription summTwoDesc = new ProblemDescription
@@ -96,11 +97,11 @@ namespace throwcode_back.DB_Context
                 Cheat = "К этой задаче нет подсказок",
                 Id = 1,
                 InitialCodeJson = JsonConvert.SerializeObject(new { Javascript = "JS Code Here!", Csharp = "C# Code Here!", CPlus = "C++ Code Here!" }),
-                TestCasesJson = JsonConvert.SerializeObject(new[]
+                TestCasesJson = JsonConvert.SerializeObject(new TestData[]
                 {
-                    new { input = new { a = 1, b = 2 }, output = new { output = 3 } },
-                    new { input = new { a = 4, b = 4 }, output = new { output = 8 } },
-                }),
+                    new TestData { input = new string[] {"2", "1"}, output = "3" },
+                    new TestData { input = new string[] {"2", "2"}, output = "4" },
+                })
             };
 
             modelBuilder.Entity<User>(b =>

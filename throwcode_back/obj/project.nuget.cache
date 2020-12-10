@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "bxYAM1l2tRW+fKPRahK6cVE9hom8mj2P+HKiSbtOmhHZDE9X9V7n9lFHBYhx+YnzD7rvV6MzrItFRxuTkwUcbQ==",
+  "dgSpecHash": "dx2dBUK+NDlaXWWJRjQngVRq0XFmRlAhtR3b3V4ZK01x3T6ulSORR9LD1VQOjhEgHHIfxi2uB6GO/Fu8Fr1V4g==",
   "success": true,
   "projectFilePath": "C:\\Users\\artem\\source\\repos\\throwcode_back\\throwcode_back\\throwcode_back.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\artem\\.nuget\\packages\\bytesize\\2.0.0\\bytesize.2.0.0.nupkg.sha512",
     "C:\\Users\\artem\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\artem\\.nuget\\packages\\microsoft.aspnet.webapi.client\\5.2.7\\microsoft.aspnet.webapi.client.5.2.7.nupkg.sha512",
     "C:\\Users\\artem\\.nuget\\packages\\microsoft.aspnet.webapi.core\\5.2.7\\microsoft.aspnet.webapi.core.5.2.7.nupkg.sha512",
