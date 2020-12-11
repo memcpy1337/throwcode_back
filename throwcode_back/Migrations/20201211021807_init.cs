@@ -13,6 +13,7 @@ namespace throwcode_back.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Type = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Rating = table.Column<int>(type: "int", nullable: false),
                     Title = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Solved = table.Column<int>(type: "int", nullable: false),
                     Trying = table.Column<int>(type: "int", nullable: false)
@@ -30,7 +31,8 @@ namespace throwcode_back.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Login = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Password = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Email = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                    Email = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Rating = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -86,20 +88,20 @@ namespace throwcode_back.Migrations
 
             migrationBuilder.InsertData(
                 table: "Problems",
-                columns: new[] { "Id", "Solved", "Title", "Trying", "Type" },
+                columns: new[] { "Id", "Rating", "Solved", "Title", "Trying", "Type" },
                 values: new object[,]
                 {
-                    { 1, 0, "Найти сумму двух чисел", 0, "Easy" },
-                    { 2, 0, "Найти разницу двух чисел", 0, "Easy" }
+                    { 1, 0, 0, "Найти сумму двух чисел", 0, "Easy" },
+                    { 2, 0, 0, "Найти разницу двух чисел", 0, "Easy" }
                 });
 
             migrationBuilder.InsertData(
                 table: "Users",
-                columns: new[] { "Id", "Email", "Login", "Password" },
+                columns: new[] { "Id", "Email", "Login", "Password", "Rating" },
                 values: new object[,]
                 {
-                    { 1, "admin@admin.ru", "admin", "admin" },
-                    { 2, "slave@slave.ru", "slave", "slave" }
+                    { 1, "admin@admin.ru", "admin", "admin", 0 },
+                    { 2, "slave@slave.ru", "slave", "slave", 0 }
                 });
 
             migrationBuilder.InsertData(

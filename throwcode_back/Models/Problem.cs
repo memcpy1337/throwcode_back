@@ -13,12 +13,13 @@ namespace throwcode_back.Models
         [ForeignKey("Id")]
         public int Id { get; set; }
         public string Type { get; set; }
+        public int Rating { get; set; }
         public string Title { get; set; }
         public int Solved { get; set; }
         public int Trying { get; set; }
         [Required]
         public ProblemDescription ProblemDescription { get; set; }
-        public  List<User> Solved_By { get; set; }
+        public List<User> Solved_By { get; set; }
     }
 
     public class ProblemDescription

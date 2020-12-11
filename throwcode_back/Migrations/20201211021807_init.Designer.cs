@@ -9,7 +9,7 @@ using throwcode_back.DB_Context;
 namespace throwcode_back.Migrations
 {
     [DbContext(typeof(UserContext))]
-    [Migration("20201210065020_init")]
+    [Migration("20201211021807_init")]
     partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -42,6 +42,9 @@ namespace throwcode_back.Migrations
                         .HasColumnType("int")
                         .UseIdentityColumn();
 
+                    b.Property<int>("Rating")
+                        .HasColumnType("int");
+
                     b.Property<int>("Solved")
                         .HasColumnType("int");
 
@@ -62,6 +65,7 @@ namespace throwcode_back.Migrations
                         new
                         {
                             Id = 1,
+                            Rating = 0,
                             Solved = 0,
                             Title = "Найти сумму двух чисел",
                             Trying = 0,
@@ -70,6 +74,7 @@ namespace throwcode_back.Migrations
                         new
                         {
                             Id = 2,
+                            Rating = 0,
                             Solved = 0,
                             Title = "Найти разницу двух чисел",
                             Trying = 0,
@@ -93,6 +98,9 @@ namespace throwcode_back.Migrations
                     b.Property<string>("Password")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("Rating")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
 
                     b.ToTable("Users");
@@ -103,14 +111,16 @@ namespace throwcode_back.Migrations
                             Id = 1,
                             Email = "admin@admin.ru",
                             Login = "admin",
-                            Password = "admin"
+                            Password = "admin",
+                            Rating = 0
                         },
                         new
                         {
                             Id = 2,
                             Email = "slave@slave.ru",
                             Login = "slave",
-                            Password = "slave"
+                            Password = "slave",
+                            Rating = 0
                         });
                 });
 
